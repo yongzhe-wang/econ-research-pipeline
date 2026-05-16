@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+ENV/
+*.egg-info/
+dist/
+build/
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# LaTeX
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# Data files (replication kit ships no data)
+*.dta
+*.csv
+*.xlsx
+*.parquet
+*.feather
+
+# Results not meant for repo
+*.pdf
+!docs/**/*.pdf
+results/
+papers/*/results/
+papers/*/data/
+
+# Tectonic cache
+.tectonic-cache/
+
+# Codex CLI cache
+.codex/
+
+# Logs
+*.log

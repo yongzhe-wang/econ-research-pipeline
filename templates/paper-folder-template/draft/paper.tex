@@ -1,0 +1,107 @@
+\documentclass[12pt]{article}
+
+% --- Packages ---
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{amsmath, amssymb}
+\usepackage{natbib}
+\usepackage{hyperref}
+\usepackage{setspace}
+\usepackage{caption}
+
+\bibliographystyle{chicago}   % Swap for aer / qje / restud as journal-specific files are dropped in
+\setcitestyle{authoryear,round}
+\doublespacing
+
+% --- Title block ---
+\title{\textbf{<PAPER TITLE>}\thanks{Acknowledgments.}}
+\author{<Author Name>\\<Affiliation>\\\texttt{<email>}}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+% =====================================================
+\begin{abstract}
+\noindent
+% 200 words. Lead with the headline number.
+% One-sentence question. One-sentence data + identification.
+% Two-sentence main result. One-sentence contribution.
+\end{abstract}
+
+\medskip
+\noindent\textbf{JEL:} % e.g. J21, J31, O15
+\\\textbf{Keywords:} % 3-5 keywords
+
+% =====================================================
+\section{Introduction}
+\label{sec:intro}
+% Paragraph 1: problem statement.
+% Paragraph 2: why it matters (theory/policy/literature stakes).
+% Paragraph 3: what I do (data, identifying variation, method — one sentence each).
+% Paragraph 4: main finding (headline number, units, interpretation, brief robustness mention).
+% Paragraph 5: contribution (3 bullets vs prior literature) and roadmap.
+
+% =====================================================
+\section{Literature}
+\label{sec:lit}
+% Organize by sub-question, not chronologically.
+% Anchor each paragraph on a gap-analysis tension from annotated_bib.md.
+% \citet{key} when author is subject; \citep{key} parenthetical.
+
+% =====================================================
+\section{Data}
+\label{sec:data}
+% Source, sample period, unit of observation.
+% Sample-construction filters (point to design.md for full detail).
+% Key variables with construction notes.
+% Summary stats:
+% \input{../results/tab_summary.tex}
+
+% =====================================================
+\section{Empirical Strategy}
+\label{sec:strategy}
+% Estimating equation.
+\begin{equation}
+Y_{it} = \alpha_i + \gamma_t + \beta \, D_{it} + X_{it}' \theta + \varepsilon_{it}
+\label{eq:main}
+\end{equation}
+% Identification argument. Threats. Mitigations. Cluster level.
+
+% =====================================================
+\section{Results}
+\label{sec:results}
+
+\subsection{Main result}
+% \input{../results/tab_main.tex}
+% Two-three paragraphs interpreting the coefficient in plain English
+% (drawn from results/interpretation.md).
+
+\subsection{Heterogeneity}
+% \input{../results/tab_het.tex}
+% \begin{figure}[h] \centering \includegraphics[width=.8\textwidth]{../results/fig_het.pdf}
+% \caption{Heterogeneous effects.} \label{fig:het} \end{figure}
+
+% =====================================================
+\section{Robustness}
+\label{sec:robust}
+% Walk through each robustness table in 1-2 sentences.
+% \input{../results/tab_robust_1.tex}
+
+% =====================================================
+\section{Conclusion}
+\label{sec:conclusion}
+% Recap finding. Situate against literature. 1-2 honest limitations + future directions.
+
+% =====================================================
+\section*{Acknowledgments}
+% Stub.
+
+\section*{Data availability}
+% Describe data source, access, replication code repository.
+
+% =====================================================
+\bibliography{refs}
+
+\end{document}
